@@ -1,0 +1,47 @@
+/* Imports */
+@import "./components/responsive";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kumbh Sans";
+  color: #fff;
+}
+
+/* Section 1 - header */
+.header {
+  min-height: 25vh;
+  background-image: url(../images/desktop/bg-pattern-header.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* Section 2 - search bar */
+/* Section 3 - search result */
+
+/* Toggle Button */
+.toggle-btn {
+  width: 4rem;
+  height: 1.5rem;
+  background: #fff;
+  border-radius: 2rem;
+  padding: 0.25rem;
+  cursor: pointer;
+  margin-left: 2rem;
+  .inner-circle {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: #5964e0;
+    transition: all 0.5s ease-in-out;
+  }
+  &.active {
+    & > .inner-circle {
+      margin-left: 2.5rem;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+}
