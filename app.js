@@ -8,7 +8,7 @@ function activateDarkMode(e) {
   if (!e.target.classList.contains("active")) {
     toggleButton.classList.add("active");
     moonIcon.src = "../images/desktop/icon-sun.svg";
-    document.body.style.background = "black";
+    document.body.style.background = "#121721";
   } else {
     toggleButton.classList.remove("active");
     moonIcon.src = "../images/desktop/icon-moon.svg";

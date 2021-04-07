@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/job-seeker.svg" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="sass/style.css">
-    <title>Gihub Jobs</title>
+    <title>Github Jobs</title>
 </head>
 <body>
 
     <div class="container-fluid">
         <!-- 1. Header section -->
         <div class="row header justify-content-center align-items-center">
-            <div class="col-10 d-flex justify-content-between align-items-center">
+            <div class="col-10 col-lg-8 d-flex justify-content-between align-items-center">
                 <!-- 1.1 Logo -->
                 <img class="img-fluid" src="./images/desktop/logo.svg" alt="logo">
                 <!-- 1.2 Dark-mode -->
@@ -29,6 +31,40 @@
             </div>
         </div>
         <!-- 2. Input search bar section -->
+        <div class="row justify-content-center search-bar">
+            <div class="col-8 bg-white shadow rounded d-flex align-items-center justify-content-center">
+                <div class="row w-100">
+                    <!-- 2.1 Filter-by-title  -->
+                    <div class="col-md-4 border-right title">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text bg-white border-0" id="basic-addon1"><img src="./images/desktop/icon-search.svg" alt="search-icon"></span>
+                            </div>
+                            <input type="text" class="form-control border-0" placeholder="Filter by title..." aria-label="Username" aria-describedby="basic-addon1">
+                          </div>                          
+                    </div>
+                    <!-- 2.2 Filter-by-location -->
+                    <div class="col-md-4 location hide border-right">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text bg-white border-0" id="basic-addon1"><img src="./images/desktop/icon-location.svg" alt="location-icon"></span>
+                            </div>
+                            <input type="text" class="form-control border-0" placeholder="Filter by location..." aria-label="Username" aria-describedby="basic-addon1">
+                          </div>                          
+                    </div>
+                    <!-- 2.3 full-time and search  -->
+                    <div class="col-md-4 hide d-flex justify-content-between align-items-center">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="custom-control-label" for="customCheck1">Full Time</label>
+                        </div>   
+                        <button class="btn"><i class="fas fa-search"></i></button>             
+                    </div>
+                </div>
+            </div>
+    
+            </div>
+        </div>
         <!-- 3. Search result Section -->
     </div>
 

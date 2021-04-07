@@ -5,12 +5,30 @@
   /* Section 3 - search result */
 }
 
-/* mobile */
-@media only screen and (max-width: 576px) {
+/* Tablet */
+@media only screen and (max-width: 768px) {
   /* Section 1 - header */
   .header {
     background-image: url(../../images/mobile/bg-pattern-header.svg) !important;
   }
+  /* Section 2 - search bar */
+  .search-bar {
+    .title {
+      border: none !important;
+    }
+    .location {
+      //margin: 2rem 0;
+    }
+    .hide > * {
+      display: none;
+    }
+  }
+  /* Section 3 - search result */
+}
+
+/* mobile */
+@media only screen and (max-width: 576px) {
+  /* Section 1 - header */
   /* Section 2 - search bar */
   /* Section 3 - search result */
 }

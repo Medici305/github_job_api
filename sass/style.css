@@ -5,13 +5,26 @@
   /* Section 2 - search bar */
   /* Section 3 - search result */
 }
-/* mobile */
-@media only screen and (max-width: 576px) {
+/* Tablet */
+@media only screen and (max-width: 768px) {
   /* Section 1 - header */
   .header {
     background-image: url(../../images/mobile/bg-pattern-header.svg) !important;
   }
 
+  /* Section 2 - search bar */
+  .search-bar .title {
+    border: none !important;
+  }
+  .search-bar .hide > * {
+    display: none;
+  }
+
+  /* Section 3 - search result */
+}
+/* mobile */
+@media only screen and (max-width: 576px) {
+  /* Section 1 - header */
   /* Section 2 - search bar */
   /* Section 3 - search result */
 }
@@ -24,17 +37,44 @@
 body {
   font-family: "Kumbh Sans";
   color: #fff;
+  background: #f4f6f8;
+  transition: all 0.5s ease-in-out;
+}
+
+label {
+  color: black;
+  font-weight: 700;
+}
+label.active {
+  color: #fff;
 }
 
 /* Section 1 - header */
 .header {
-  min-height: 25vh;
+  min-height: 20vh;
   background-image: url(../images/desktop/bg-pattern-header.svg);
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
 }
 
 /* Section 2 - search bar */
+.search-bar {
+  min-height: 10vh;
+  margin: 0rem;
+  position: absolute;
+  top: 15%;
+  width: 100%;
+}
+.search-bar button {
+  background: transparent;
+  border: none;
+  background: #5964e0;
+  color: #fff;
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+}
+
 /* Section 3 - search result */
 /* Toggle Button */
 .toggle-btn {
@@ -43,7 +83,6 @@ body {
   background: #fff;
   border-radius: 2rem;
   padding: 0.25rem;
-  cursor: pointer;
   margin-left: 2rem;
 }
 .toggle-btn .inner-circle {
@@ -57,5 +96,7 @@ body {
   margin-left: 2.5rem;
   transition: all 0.5s ease-in-out;
 }
+
+/* custom checkbox */
 
 /*# sourceMappingURL=style.css.map */
