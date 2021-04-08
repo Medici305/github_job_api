@@ -7,19 +7,32 @@
   box-sizing: border-box;
 }
 
+:root {
+  --body-bg: #f4f6f8;
+  --card-bg: #fff;
+  --text-color: #252525;
+}
+
+.dark_mode {
+  --body-bg: #121721;
+  --card-bg: #19202d;
+  --text-color: #f5f5f5;
+}
+
 body {
   font-family: "Kumbh Sans";
   color: #fff;
-  background: #f4f6f8;
+  background: var(--body-bg);
   transition: all 0.5s ease-in-out;
+  overflow-x: hidden;
 }
 
 label {
   color: black;
   font-weight: 700;
-  &.active {
-    color: #fff;
-  }
+}
+
+i {
 }
 
 /* Section 1 - header */
@@ -35,10 +48,20 @@ label {
 .search-bar {
   min-height: 10vh;
   margin: 0rem;
-  //border: 2px solid yellow;
   position: absolute;
   top: 15%;
+  left: 0;
   width: 100%;
+  .col-8,
+  span,
+  input {
+    background: var(--card-bg);
+    color: var(--text-color);
+  }
+  &.active > * {
+    transition: all 0.5s ease-in-out;
+    background: #19202d !important;
+  }
   button {
     background: transparent;
     border: none;
@@ -47,9 +70,15 @@ label {
     padding: 0.5rem 2rem;
     border-radius: 0.5rem;
   }
+  .col-md-4.active {
+    background: #19202d !important;
+  }
 }
 
 /* Section 3 - search result */
+.results {
+  margin-top: 7.5rem;
+}
 
 /* Toggle Button */
 .toggle-btn {
@@ -59,6 +88,7 @@ label {
   border-radius: 2rem;
   padding: 0.25rem;
   margin-left: 2rem;
+  cursor: pointer;
   .inner-circle {
     width: 1rem;
     height: 1rem;
@@ -74,4 +104,35 @@ label {
   }
 }
 
-/* custom checkbox */
+/* section 4 fixed Popup */
+.box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  .inner-box {
+    width: 67.5%;
+    background: var(--card-bg);
+    color: var(--text-color);
+    button {
+      background: transparent;
+      border: none;
+      background: #5964e0;
+      color: #fff;
+      padding: 0.5rem 2rem;
+      border-radius: 0.5rem;
+    }
+    .col-8,
+    span,
+    input, label {
+      background: var(--card-bg);
+      color: var(--text-color);
+    }
+  }
+}

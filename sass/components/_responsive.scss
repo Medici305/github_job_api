@@ -13,8 +13,12 @@
   }
   /* Section 2 - search bar */
   .search-bar {
+      z-index: 2;
     .title {
       border: none !important;
+      i {
+        cursor: pointer;
+      }
     }
     .location {
       //margin: 2rem 0;

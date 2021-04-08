@@ -13,8 +13,14 @@
   }
 
   /* Section 2 - search bar */
+  .search-bar {
+    z-index: 2;
+  }
   .search-bar .title {
     border: none !important;
+  }
+  .search-bar .title i {
+    cursor: pointer;
   }
   .search-bar .hide > * {
     display: none;
@@ -34,19 +40,29 @@
   box-sizing: border-box;
 }
 
+:root {
+  --body-bg: #f4f6f8;
+  --card-bg: #fff;
+  --text-color: #252525;
+}
+
+.dark_mode {
+  --body-bg: #121721;
+  --card-bg: #19202d;
+  --text-color: #f5f5f5;
+}
+
 body {
   font-family: "Kumbh Sans";
   color: #fff;
-  background: #f4f6f8;
+  background: var(--body-bg);
   transition: all 0.5s ease-in-out;
+  overflow-x: hidden;
 }
 
 label {
   color: black;
   font-weight: 700;
-}
-label.active {
-  color: #fff;
 }
 
 /* Section 1 - header */
@@ -64,7 +80,18 @@ label.active {
   margin: 0rem;
   position: absolute;
   top: 15%;
+  left: 0;
   width: 100%;
+}
+.search-bar .col-8,
+.search-bar span,
+.search-bar input {
+  background: var(--card-bg);
+  color: var(--text-color);
+}
+.search-bar.active > * {
+  transition: all 0.5s ease-in-out;
+  background: #19202d !important;
 }
 .search-bar button {
   background: transparent;
@@ -74,8 +101,15 @@ label.active {
   padding: 0.5rem 2rem;
   border-radius: 0.5rem;
 }
+.search-bar .col-md-4.active {
+  background: #19202d !important;
+}
 
 /* Section 3 - search result */
+.results {
+  margin-top: 7.5rem;
+}
+
 /* Toggle Button */
 .toggle-btn {
   width: 4rem;
@@ -84,6 +118,7 @@ label.active {
   border-radius: 2rem;
   padding: 0.25rem;
   margin-left: 2rem;
+  cursor: pointer;
 }
 .toggle-btn .inner-circle {
   width: 1rem;
@@ -97,6 +132,37 @@ label.active {
   transition: all 0.5s ease-in-out;
 }
 
-/* custom checkbox */
+/* section 4 fixed Popup */
+.box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.box .inner-box {
+  width: 67.5%;
+  background: var(--card-bg);
+  color: var(--text-color);
+}
+.box .inner-box button {
+  background: transparent;
+  border: none;
+  background: #5964e0;
+  color: #fff;
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+}
+.box .inner-box .col-8,
+.box .inner-box span,
+.box .inner-box input, .box .inner-box label {
+  background: var(--card-bg);
+  color: var(--text-color);
+}
 
 /*# sourceMappingURL=style.css.map */
